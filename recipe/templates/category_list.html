@@ -4,10 +4,8 @@
 {% block content %}
   <h1>Category List</h1>
   <ul>
-    {% for category in categories %}
-      <li>{{ category.name }}</li>
-    {% empty %}
-      <li>No categories found.</li>
+    {% for category_count in category_counts %}
+        <li>{{ category_count.name }}: {{ category_count.count }}</li>
     {% endfor %}
   </ul>
 {% endblock %}
